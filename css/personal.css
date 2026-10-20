@@ -1,0 +1,71 @@
+/* Small content, accessibility and print adaptations to Augustine. */
+:root{--font-1:"Inter","Microsoft YaHei","PingFang SC",sans-serif;--font-2:"Castoro","Songti SC",SimSun,serif}
+html{scroll-padding-top:10rem} .skip-link{position:fixed;top:-100px;left:1rem;z-index:1000;background:white;padding:1rem}.skip-link:focus{top:1rem}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #2f6368;outline-offset:5px}
+.s-intro__bg{background-image:url(../images/lena-delta.jpg)}.s-intro__text h3{font-size:clamp(1.7rem,2.5vw,3.6rem);text-shadow:0 1px 20px #081c33}.s-intro__text h3 span{color:#cfe6e8}
+.image-credit{font-size:1.2rem;line-height:1.8;margin:1rem 0 0;text-align:right}.image-credit a{color:inherit}
+.about-detail{max-width:78rem}.draft-note{display:block;font-size:1.35rem;line-height:1.8;color:#536267;margin-top:1rem}
+.timeline__desc p{line-height:1.95}.text-huge-title{line-height:1.22}.folio-item__thumb img{width:100%;aspect-ratio:3/2;object-fit:cover}.folio-item__thumb a::after{content:"↗"}.work-description{font-size:1.6rem;line-height:1.9;margin-top:1.2rem}.folio-item__title a{color:inherit}
+.ss-go-top a{font-size:2.7rem;text-align:center;line-height:6rem}.s-footer__contact-info a{overflow-wrap:anywhere}
+.practice-main{padding-top:18rem;padding-bottom:10rem}.practice-main>.row{max-width:1080px}.practice-main .text-huge-title{font-size:clamp(4rem,7vw,8rem)}.practice-block{padding-top:6rem;padding-bottom:4rem;border-bottom:1px solid #a8c9cc;scroll-margin-top:2rem}.practice-block h2{font-size:clamp(2.6rem,4vw,4rem)}
+.demo-actions{display:flex;flex-wrap:wrap;gap:1rem}.demo-actions .btn{margin-right:0;padding:0 2.5rem}.demo-image{display:block;width:100%;margin:1rem 0}.legend{list-style:none;display:flex;flex-wrap:wrap;gap:2rem;margin:2rem 0}.legend li{padding:0}.legend i{display:inline-block;width:1.1rem;height:1.1rem;margin-right:.7rem;border-radius:50%}
+.comparison{position:relative;line-height:0}.comparison img{display:block;width:100%}.comparison .after-image{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--split)) 0 0)}.divider{position:absolute;left:var(--split);top:0;bottom:0;width:3px;background:#fff;transform:translateX(-50%)}input[type=range]{width:100%;accent-color:#3c777c;cursor:ew-resize;margin:1rem 0 3rem}details{font-size:1.6rem;margin-top:2rem}summary{cursor:pointer}details p{padding-top:1rem}
+.no-js #preloader{display:none}.no-js [data-animate-el],.no-js .animate-on-load{opacity:1!important;transform:none!important}.no-js .s-header__nav-wrap{visibility:visible;opacity:1;transform:none}.no-js .s-header__menu-toggle{display:none}
+@media(max-width:900px){.no-js .s-header{position:relative}.no-js .s-header__nav-wrap{display:block;height:auto;padding:1rem 2.4rem}.no-js .s-header__nav ul{display:flex;gap:2rem;flex-wrap:wrap}.no-js .s-header__nav li{border:0}.no-js .s-header__nav a{padding:0}.no-js .s-header__social{display:none}}
+@media(max-width:600px){.s-intro__text-huge{font-size:18vw}.image-credit{font-size:1rem}.s-about__intro .attention-getter{font-size:clamp(2.1rem,6.5vw,2.7rem)}.text-huge-title{letter-spacing:-.02em}.practice-main{padding-top:13rem}.s-footer__contact-header .text-huge-title{font-size:4.4rem}.demo-actions .btn{font-size:1.1rem;padding:0 1.8rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media print {
+  @page { size:A4; margin:14mm; }
+  html { font-size:9px; }
+  body { background:#fff!important; color:#111!important; }
+  .s-header,.skip-link,#preloader,.ss-go-top,.s-footer__buttons { display:none!important; }
+  .row { width:100%; max-width:none; margin:0; }
+  .column { padding-left:0; padding-right:0; }
+  p { margin-bottom:1rem; font-size:1.45rem; line-height:1.7; }
+  .s-intro { padding-top:0; }
+  .s-intro__text { position:static; transform:none; margin:0 0 1rem; }
+  .s-intro__bg { aspect-ratio:3.5/1; print-color-adjust:exact; }
+  .s-intro__text-huge { font-size:5rem; color:#111; margin:0 0 .5rem; line-height:1.1; }
+  .s-intro__text h3 { font-size:2rem; color:#111; text-shadow:none; margin:0; }
+  .image-credit { font-size:1rem; margin:.5rem 0 0; }
+  .s-about { padding:2rem 0 0!important; }
+  .s-about__block { padding:0!important; margin-bottom:1.5rem; }
+  .text-pretitle { font-size:1.2rem; margin:0 0 .8rem; }
+  .s-about__intro .attention-getter { font-size:2.1rem; line-height:1.5; margin-bottom:1rem; }
+  .text-huge-title { font-size:3rem; margin:.6rem 0 1rem; }
+  .s-about__career-header { margin-bottom:0; }
+  .s-about__timeline { padding-top:.5rem; margin-top:0; }
+  .s-about__timeline-section { width:50%; flex:0 0 50%; padding:0 1rem!important; }
+  .s-about__timeline-section::before,.timeline__bullet,.text-subtitle::before { display:none!important; }
+  .s-about .text-subtitle { padding-left:0; font-size:1.4rem; line-height:1.5; margin:0; }
+  .timeline { margin-top:.7rem; padding:0; }
+  .timeline__block { padding:0 0 1rem; }
+  .timeline__title { font-size:1.8rem; line-height:1.4; margin:0; }
+  .timeline__meta { font-size:1.15rem; line-height:1.4; margin:.3rem 0; }
+  .timeline__desc p { margin:0; font-size:1.3rem; line-height:1.65; }
+  .draft-note { font-size:1.1rem; line-height:1.5; margin:.5rem 0; }
+  .s-works { padding:0!important; break-before:page; }
+  .folio-list { display:flex; flex-wrap:wrap; margin:2rem 0; }
+  .folio-list>.column { width:33.333%; flex:0 0 33.333%; padding:0 1rem!important; }
+  .folio-item { margin-bottom:0; }
+  .folio-item__info { padding-top:1rem; }
+  .folio-item__title { font-size:2rem; margin:.6rem 0; }
+  .folio-item__meta .cat,.work-description { font-size:1.25rem; line-height:1.7; }
+  .folio-item__meta .project-link { display:none; }
+  .s-footer { padding:3rem 0 0!important; }
+  .s-footer__contact-header { margin-bottom:1rem; }
+  .s-footer__contact-content { display:flex; justify-content:space-between; }
+  .s-footer__contact-content>.column { width:48%; flex:0 0 48%; margin-left:0; padding-top:0; }
+  .s-footer .text-subtitle { font-size:1.4rem; margin:0; }
+  .s-footer .link-list { margin:.5rem 0 0; font-size:1.4rem; line-height:1.8; }
+  .s-footer__bottom { margin-top:1rem; padding-top:1rem; }
+  .ss-copyright { font-size:1rem; line-height:1.6; }
+  .animate-on-load,[data-animate-el],.s-intro__bg { opacity:1!important; transform:none!important; }
+  .timeline__block,.folio-item,.s-footer { break-inside:avoid; }
+}
+
+/* Resume content stays within Augustine's typography and quiet blue palette. */
+.profile-grid{margin-top:5rem;row-gap:4rem}.profile-entry{padding:2.5rem 0;border-top:1px solid #a8c9cc;margin-right:3rem}.eyebrow{font-size:1.2rem;letter-spacing:.08em;color:#44666a}.profile-entry h4{font-size:2.5rem;margin:1rem 0}.profile-entry p{font-size:1.7rem;line-height:1.95;margin:0}.profile-grid .text-subtitle{padding-left:0}.profile-grid .text-subtitle:before{display:none}.section-note{max-width:75rem;font-size:1.7rem;line-height:1.9}.project-list>.column{width:33.333%;flex:0 0 33.333%}.project-list .folio-item__title{font-size:2.9rem;line-height:1.35}.project-subtitle{font-size:1.7rem;margin:.7rem 0}.project-date{font-size:1.2rem;line-height:1.8;color:#44666a;letter-spacing:.02em}.project-list .cat{font-size:1.05rem}.project-list .project-link{font-size:1.05rem}.project-list .folio-item__meta{gap:.6rem;flex-wrap:wrap}.learning-section{padding:5rem 0 13rem}.practice-heading{font-size:clamp(3.5rem,5vw,6rem);margin:2rem 0 3rem}.practice-row{display:flex;align-items:center;gap:3rem;padding:3rem 0;border-top:1px solid #a8c9cc;color:inherit;transition:padding .2s}.practice-row:last-child{border-bottom:1px solid #a8c9cc}.practice-row:hover{padding-left:1rem;color:#285f63}.practice-number{font-size:1.5rem;color:#44666a}.practice-row strong{display:block;font-size:2.5rem;font-weight:400}.practice-row small{display:block;font-size:1.5rem;line-height:1.8;margin-top:.7rem;color:#44666a}.row-arrow{margin-left:auto;font-size:3.4rem}.project-directory{display:flex;gap:3rem;flex-wrap:wrap;margin:4rem 0}.project-directory a{font-size:1.6rem;color:#315b55;border-bottom:1px solid #7b9d92}.project-detail{padding:6rem 0 5rem;border-top:1px solid #a8c9cc;scroll-margin-top:10rem}.detail-heading h2{font-size:4.1rem;margin:1.5rem 0}.detail-heading h2 span{font-size:2rem;font-weight:400;margin-left:2rem}.detail-lead{font-size:2rem;margin-bottom:3rem}.detail-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start}.detail-grid figure{margin:0}.detail-grid img{width:100%;display:block}.detail-grid figcaption{font-size:1.1rem;line-height:1.7;margin-top:1rem;color:#44666a}.detail-copy h3{font-size:1.7rem;margin:0 0 .7rem}.detail-copy p{font-size:1.6rem;line-height:1.9;margin-bottom:2rem}.detail-back{display:inline-block;font-size:1.6rem;color:#315b55;border-bottom:1px solid #7b9d92;margin-top:2rem}
+@media(max-width:1000px){.project-list>.column{width:100%;flex:0 0 100%}.project-list .folio-item{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:4rem}.project-list .folio-item__info{padding-top:0}.profile-entry{margin-right:0}}
+@media(max-width:600px){.project-list .folio-item{display:block}.project-list .folio-item__info{padding-top:2rem}.project-list .folio-item__title{font-size:3rem}.profile-grid{margin-top:3rem}.profile-entry h4{font-size:2.3rem}.profile-entry p{font-size:1.6rem}.practice-row{gap:1.7rem}.practice-row strong{font-size:2rem}.learning-section{padding-bottom:7rem}.detail-grid{grid-template-columns:1fr;gap:2rem}.detail-heading h2{font-size:3.2rem}.detail-heading h2 span{display:block;margin:1rem 0 0}.detail-lead{font-size:1.8rem}.project-directory{gap:1.5rem}.project-detail{scroll-margin-top:8rem}.eyebrow{font-size:1.05rem;line-height:1.8}.row-arrow{font-size:2.5rem}}
+@media print{body{background:#dceef0!important;print-color-adjust:exact}.project-list>.column{width:33.333%;flex:0 0 33.333%}.project-list .folio-item{display:block}.learning-section{padding:2rem 0}.profile-grid{margin-top:1rem}.profile-entry{padding:1rem 0}.profile-entry h4{font-size:1.6rem}.profile-entry p{font-size:1.2rem}.practice-heading{font-size:2.4rem}.practice-row{padding:1rem 0}.practice-row strong{font-size:1.5rem}.project-detail{break-before:page}.project-list .folio-item__title{font-size:1.8rem}}
